@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:transitionGroup="true"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/madeby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Made by Khoa CNTT&amp;TT - Trường ĐH Cần Thơ"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textColor="#FF0000" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_enablebt"
+        android:onClick="on"
+        android:layout_below="@id/madeby"
+        android:text="@string/enablebt" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_disablebt"
+        android:onClick="off"
+        android:layout_below="@id/madeby"
+        android:text="@string/disablebt"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_scanbt"
+        android:onClick="deviceList"
+        android:layout_below="@id/madeby"
+        android:text="@string/scanbt"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/listView"
+        android:layout_below="@id/button_scanbt"/>
+
+</RelativeLayout>

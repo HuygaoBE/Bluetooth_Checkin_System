@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CommsActivity"
+    android:transitionGroup="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextName"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:hint="Mời nhập Email Trường ĐH Cần Thơ hoặc SĐT" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/editTextName">>
+
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check-in"
+            android:textSize="24sp"
+            android:onClick="checkButton" />
+
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="check-out"
+            android:onClick="checkButton"/>
+
+    </RadioGroup>
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup">
+        <TableRow>
+            <Button
+                android:id="@+id/submitbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="25dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginHorizontal="140dp"
+                android:text="Submit"
+                android:textColor="#66CCFF"
+                android:background="#FFFFFF"
+                android:textSize="22dp" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Không có dữ liệu"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textColor="#66FFCC"
+        android:id="@+id/Datatl"
+        android:layout_below="@+id/table" />
+
+</RelativeLayout>
